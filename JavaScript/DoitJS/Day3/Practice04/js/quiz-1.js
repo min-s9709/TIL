@@ -1,3 +1,4 @@
+//quiz 1
 var num = prompt("숫자를 입력하시오.");
 if(num != null){
     if (num % 2 ==0) {

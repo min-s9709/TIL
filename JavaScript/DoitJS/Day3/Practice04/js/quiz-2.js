@@ -1,3 +1,4 @@
+//quiz2
 var count = 0;
 
 for (var i = 1; i<=100; i++){
