@@ -1,4 +1,4 @@
-// switch문 예제
+// switch문 예제.
 
 var session = prompt(
     "관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인",
