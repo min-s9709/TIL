@@ -1,4 +1,4 @@
-// 3의 배수 검사기 만들기 
+// 3의 배수 검사기 만들기 .
 
 var userNumber = prompt("숫자를 입력하세요.");
 var displayArea = document.querySelector('#result');
