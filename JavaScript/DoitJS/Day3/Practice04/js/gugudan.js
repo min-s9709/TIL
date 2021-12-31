@@ -1,0 +1,10 @@
+// 구구단 프로그램 만들기
+
+for(var i = 2; i<=9; i++){
+    document.write("<div>");
+    document.write(`<h3>${i}단</h3>`);
+    for(var j = 1; j<=9; j++){
+        document.write(`${i} X ${j} = ${i*j} <br>`);
+    }
+    document.write("</div>");
+}
