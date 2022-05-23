@@ -192,7 +192,7 @@ TRUNCATE TABLE F_INFO;
 
 정의된 데이터베이스에 레코드를 입력하거나, 수정, 삭제 및 조회하기 위한 명령어다.
 
-- SELECT : 데이터 입력
+- SELECT : 데이터 조회
 - INSERT : 데이터 입력
 - UPDATE : 데이터 수정
 - DELETE :  데이터 삭제
@@ -265,7 +265,7 @@ SAVEPOINT S1;
 INSERT INTO T1 VALUES(50, 500);
 ROLLBACK TO SAVEPOINT S1;
 
-SELECT MAX(col2) FROM T1; -- 300
+SELECT MAX(col2) FROM T1; -- 250
 ```
 
 ex) 다음의 SQL문을 수행했을 때 영구적으로 반영되는 co1의 값을 모두 쓰시오.
@@ -416,7 +416,7 @@ SELECT 회원코드, RTRIM(연령대, '대'), UPPER(이름) FROM C_INFO;
 
 #### 숫자형 함수
 
-- ROUND(숫자, 소수점 자리수) : 반올림. ROUND(25.3578.2) > 25.36
+- ROUND(숫자, 소수점 자리수) : 반올림. ROUND(25.35782) > 25.36
 - TURNC(숫자, 소수점 자리수) : 버림. TURNC(25.3578, 2) > 25.35
 - CEIL(숫자) : 크거나 같은 최소 정수 반환. CEIL(33.5) > 34
 - FLOOR(숫자) : 작거나 같은 최대 정수 반환. FLOOR(33.5) > 33
@@ -630,14 +630,6 @@ FROM C_INFO
 GROUP BY 성별;
 ```
 
-| 회원코드 | 성별 | 연령대 | 이름  |
-| :------: | :--: | :----: | :---: |
-|   101    |  F   |  20대  | kate  |
-|   102    |  M   |  30대  |  max  |
-|   103    |  F   |  20대  | lily  |
-|   104    |  M   |  40대  | paul  |
-|   105    |  F   |  10대  | james |
-
 결과
 
 | 성별 | count(회원코드) |
@@ -645,6 +637,16 @@ GROUP BY 성별;
 |  F   |        2        |
 |  M   |        2        |
 |      |        1        |
+
+ex) 다음 SQL의 결과값을 기술하시오.
+
+| 회원코드 | 성별 | 연령대 | 이름  |
+| :------: | :--: | :----: | :---: |
+|   101    |  F   |  20대  | kate  |
+|   102    |  M   |  30대  |  max  |
+|   103    |  F   |  20대  | lily  |
+|   104    |  M   |  40대  | paul  |
+|   105    |  F   |  10대  | james |
 
 ```SQL
 SELECT 성별, 연령대, COUNT(회원코드)
