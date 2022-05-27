@@ -870,7 +870,7 @@ FROM GENDER A LEFT JOIN AGE B
 	 
 SELECT A.* , B.연령
 FROM GENDER A, AGE B
-WHERE A.회원코드(+) = B.회원코드;
+WHERE A.회원코드 = B.회원코드(+);
 ```
 
 | 회원코드 | 성별 | 연령 |
@@ -890,7 +890,7 @@ FROM GENDER A RIGHT JOIN AGE B
 
 SELECT B.회원코드, 성별, 연령
 FROM GENDER A , AGE B
-WHERE A.회원코드 = B.회원코드(+);
+WHERE A.회원코드(+) = B.회원코드;
 ```
 
 | 회원코드 | 성별 | 연령 |
